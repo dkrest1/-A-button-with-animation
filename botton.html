@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>botton</title>
+    <style>
+        body {
+            padding: 30px;
+            font-size: 40px;
+            font-family: sans-serif;
+            font-weight: 400;
+            background-color: yellow;
+
+        }
+
+        .btn:link,
+        .btn:visited {
+            text-transform: uppercase;
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            padding: 15px 20px;
+            background-color:#0517da;
+            color: #fff;
+            border-radius: 100px;
+            transition: all .2s;
+            animation: flow 1s;
+            backface-visibility: hidden;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 10px rgba(0, 0, 0, .4);
+        }
+
+        .btn:active {
+        transform: translateY(-1px);
+        }
+
+        @keyframes flow {
+            0% {
+                opacity: 0;
+                transform: rotate(180deg);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: rotate(-1000deg);
+            }
+        }
+
+        .btn::after {
+            content: "";
+            display: inline-block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            border-radius: 100px;
+            background-color: #0517da;
+            z-index: -1;
+            transition: all .2s;
+    
+        }
+
+        .btn:hover::after {
+            opacity: 0;
+            transform: scaleX(1.4) scaleY(1.8);
+
+        }
+
+    </style>
+</head>
+<body>
+        <a href="#" class="btn" btn-animated>magic moment</a>
+    
+</body>
+</html>
